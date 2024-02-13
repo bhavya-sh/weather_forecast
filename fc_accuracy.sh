@@ -9,13 +9,13 @@ accuracy=$(($yesterday_fc-$today_temp))
 echo "accuracy is $accuracy"
 
 
-if [$accuracy==0]&&[$accuracy==1]&&[$accuracy==-1]
+if [$accuracy=0]&&[$accuracy=1]&&[$accuracy=-1]
 then
     accuracy_range=Excellent!
-elif [$accuracy==2]&&[$accuracy==-2]
+elif [$accuracy=2]&&[$accuracy=-2]
 then
     accuracy_range=Good
-elif [$accuracy==3]&&[$accuracy==-3]
+elif [$accuracy=3]&&[$accuracy=-3]
 then
     accuracy_range=Fair
 else
