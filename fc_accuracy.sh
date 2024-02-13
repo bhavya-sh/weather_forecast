@@ -8,14 +8,13 @@ today_temp=$(tail -1 rx_poc.log | cut -d " " -f4)
 accuracy=$(($yesterday_fc-$today_temp))
 echo "accuracy is $accuracy"
 
-
-if [$accuracy==0]&&[$accuracy==1]&&[$accuracy==-1]
+if [ $accuracy -eq 0 ] && [ $accuracy -eq 1 ] && [ $accuracy -eq -1 ] 
 then
     accuracy_range=Excellent!
-elif [$accuracy==2]&&[$accuracy==-2]
+elif [ $accuracy -eq 2 ] && [ $accuracy -eq -2 ] 
 then
     accuracy_range=Good
-elif [$accuracy==3]&&[$accuracy==-3]
+elif [ $accuracy -eq 3 ] && [ $accuracy -eq -3 ] 
 then
     accuracy_range=Fair
 else
