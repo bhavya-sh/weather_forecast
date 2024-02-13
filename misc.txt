@@ -1,0 +1,1 @@
+num_of_lines=$(($(wc -l synthetic_historical_fc_accuracy.tsv | cut -d " " -f1) - 1 ))  --> https://linuxsimply.com/bash-scripting-tutorial/variables/usage/subtract-two-variables/
